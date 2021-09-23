@@ -8,3 +8,62 @@ html{
     font-family: "Montserrat", sans-serif;
     scroll-behavior: smooth;
 }
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+a[type="button"]{    
+    border: 2px solid gold;
+    color: gold;
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+    margin: 20px 0;
+    padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s ease;
+    transition-property: background-color, color;
+}
+a[type="button"]:hover{
+    color: white;
+    background-color: gold;
+}
+
+/* Hero Section */
+#hero{
+    background-image: url(images/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+#hero::after{
+    background-color: black;
+    content: "";
+    opacity: .5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index:-1;
+}
+#hero .container{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+#hero h1{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+#hero h1 span{
+    color: gold;
+    font-weight: 700;
+}
+/* End Hero Section */
