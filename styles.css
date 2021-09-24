@@ -13,6 +13,38 @@ html{
     width: 100%;
     display: flex;
 }
+.container header h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+.container header h1 span{
+    color: gold;
+}
+.container header h2{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.container p{
+    font-weight: 300;
+    margin: 10px 0;
+    text-align: center;
+}
+.container p mark{
+    background-color: gold;
+    font-weight: 500;
+    line-height: 1.4rem;
+}
+.container img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+hr{
+    border-bottom: 2px solid black;
+    margin: 20px auto;
+    width: 50px;
+}
 a[type="button"]{    
     border: 2px solid gold;
     color: gold;
@@ -129,3 +161,40 @@ a[type="button"]:hover{
     }
 }
 /* End Hero Section */
+
+/* About Section */
+#about .container{
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+#about section{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#about .img{
+    position: relative;
+    height: 180px;
+    width: 180px;
+    margin-bottom: 10px;
+}
+#about .img img{
+    border: 5px solid white;
+    border-radius: 50%;
+}
+#about .img::after{
+    background-color: gold;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transform: scale(1.05);
+    z-index: -1;
+}
+/* End About Section */
