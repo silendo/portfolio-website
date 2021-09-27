@@ -44,8 +44,10 @@ html{
 }
 .container img{
     object-fit: cover;
+    object-position: top;
     height: 100%;
     width: 100%;
+    transition: .5s ease transform;
 }
 hr{
     border-bottom: 2px solid black;
@@ -62,7 +64,7 @@ a[type="button"]{
     text-decoration: none;
     text-transform: uppercase;
     transition: .5s ease;
-    transition-property: background-color, color;
+    transition-property: background-color, color, opacity;
 }
 a[type="button"]:hover{
     color: white;
@@ -224,3 +226,44 @@ a[type="button"]:hover{
     padding: 10px;
 }
 /* End Services Section */
+
+/* Projects Section */
+#projects .projects-items{
+    display: flex;
+    flex-direction: column;
+}
+#projects .project-item{
+    border: 2px solid gold;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    overflow: hidden;
+}
+#projects .project-image{
+    max-height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+#projects .project-image a{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+}
+#projects .project-item:hover .project-image img{
+    transform: scale(1.05);
+}
+#projects .project-item:hover .project-image a{
+    opacity: 1;
+}
+#projects .project-information{
+    padding: 20px;
+    transition: .5s ease background-color;
+}
+#projects .project-item:hover .project-information{
+    background-color: gold;
+}
+/* End Projects Section */
