@@ -124,7 +124,7 @@ ul{
 #header .container nav ul.active{
     left: 25%;
 }
-#header nav ul a{
+#header nav ul li a{
     color: white;
     display: block;
     font-size: 1.8rem;
@@ -134,7 +134,7 @@ ul{
     text-transform: uppercase;
     transition: .2s ease color;
 }
-#header nav ul a::after{
+#header nav ul li a::after{
     color:rgba(248, 248, 248, 0.03);
     content: attr(data-after);
     font-size: 2.8rem;
@@ -236,6 +236,7 @@ ul{
     font-size: 1.7rem;
     font-weight: 500;
     position: relative;
+    text-transform: none;
     width: -moz-fit-content;
     width: fit-content;
     animation: text_reveal .5s ease forwards;
@@ -481,3 +482,54 @@ ul{
     /* End Projects Section */
 }
 /* End Media Query for Tablet */
+
+/* Media Query for Desktop */
+@media only screen and (min-width: 1200px){
+    .container{
+        padding: 100px 20px;
+    }
+
+    /* Header */
+    #header .hamburger{
+        display: none;
+    }
+    #header .container nav ul{
+        background-color: transparent;
+        display: block;
+        position: initial;
+        height: auto;
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+    #header .container nav ul li{
+        display: inline-block;
+    }
+    #header nav ul li a{
+        font-size: 1.5rem;
+    }
+    #header nav ul li a::after{
+        display: none;
+    }
+    /* End Header */
+
+    /* Hero Section */
+    #hero h1{
+        font-size: 3.5rem;
+    }
+    /* End Hero Section */
+
+    /* Services Section */
+    #services .service-item{
+        flex-basis: 30%;
+        margin: 1.6%;
+    }
+    /* End Services Section */
+    
+    /* Projects Section */
+    #projects .project-item{
+        flex-basis: 30%;
+        margin: 1.6%;
+    }
+    /* End Projects Section */
+}
+/* End Media Query for Desktop */
