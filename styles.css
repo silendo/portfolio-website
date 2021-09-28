@@ -16,7 +16,7 @@ html{
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    padding: 80px 20px;
+    padding: 90px 20px;
 }
 .container h1{
     font-size: 2rem;
@@ -71,7 +71,6 @@ a[type="button"]{
     border: 2px solid gold;
     color: gold;
     font-size: 1.5rem;
-    letter-spacing: .2rem;
     margin: 20px 0;
     padding: 20px;
     text-transform: uppercase;
@@ -85,6 +84,7 @@ a[type="button"]:hover{
 ul{
     list-style: none;
 }
+
 /* Header */
 #header{
     background-color: rgba(30, 30, 30, 0.25);
@@ -97,6 +97,7 @@ ul{
 }
 #header .container{
     min-height: 8vh;
+    justify-content: center;
     padding: 15px;
 }
 #header .container nav{
@@ -106,7 +107,7 @@ ul{
     width: 100%;
 }
 #header .container nav ul{
-    background-color: rgba(30,30,30);
+    background-color: rgba(30, 30, 30);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -232,7 +233,7 @@ ul{
 }
 #hero h1{
     color: transparent;
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     font-weight: 500;
     position: relative;
     width: -moz-fit-content;
@@ -339,13 +340,15 @@ ul{
 }
 #services .services-items{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 #services .service-item{
     background-color: white;
     border: 2px solid gold;
     border-radius: 10px;
-    margin: 10px;
+    flex-basis: 90%;
+    margin: 5%;
     padding: 20px;
     transition: .5s ease background-color;
 }
@@ -365,14 +368,16 @@ ul{
 /* Projects Section */
 #projects .projects-items{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 #projects .project-item{
     border: 2px solid gold;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    flex-basis: 90%;
+    margin: 5%;
     overflow: hidden;
 }
 #projects .project-image{
@@ -440,3 +445,39 @@ ul{
     background-color: gold;
 }
 /* End Footer */
+
+/* Media Query for Tablet */
+@media only screen and (min-width: 768px){
+    .container{
+        padding: 120px 20px;
+    }
+    .container h1.brand, a[type="button"]{
+        font-size: 2rem;
+    }
+    .container h1{
+        font-size: 2.5rem;
+    }
+    /* Hero Section */
+    #hero h1{
+        font-size: 2.5rem;
+    }
+    /* End Hero Section */
+
+    /* Services Section */
+    #services .service-item{
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
+    /* End Services Section */
+
+    /* Projects Section */
+    #projects .project-item{
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
+    #projects .project-item a[type="button"]{
+        font-size: 1.5rem;
+    }
+    /* End Projects Section */
+}
+/* End Media Query for Tablet */
